@@ -100,7 +100,7 @@ html_mode(){
 	</html>
 	EOF
     # Upload HTML repot into a azure storage blob container
-	curl -X PUT -T certs_check.html -H "Content-Type: text/html" -H "x-ms-date: $(date -u)" -H "x-ms-blob-type: BlockBlob" "https://PATH-TO-YOUR-AZURE-BLOB-STORAGE.html?sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2021-01-01T10:51:00Z&st=2019-01-12T02:51:00Z&spr=https&sig=xxxxxxx" /dev/null 2>&1
+	# curl -X PUT -T certs_check.html -H "Content-Type: text/html" -H "x-ms-date: $(date -u)" -H "x-ms-blob-type: BlockBlob" "https://PATH-TO-YOUR-AZURE-BLOB-STORAGE.html?sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2021-01-01T10:51:00Z&st=2019-01-12T02:51:00Z&spr=https&sig=xxxxxxx" /dev/null 2>&1
 }
 
 terminal_mode(){

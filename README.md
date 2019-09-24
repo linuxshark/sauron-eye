@@ -61,3 +61,13 @@ In HTML mode and sending the result to an email:
 Checking our email we will see:
 
 ![screenshot from 2018-02-11 20-30-11](https://user-images.githubusercontent.com/12804701/36078161-891bb566-0f73-11e8-984c-1cd65127a8e4.png)
+
+In Dockerized lauch as the following, mapping a volume with the sitelist file:
+```bash
+docker pull linuxshark/sauron-eye:1.0
+docker run -v /PATH_TO_YOUR/SITELIST_FILE/:/app/ sauron-eye:1.0 bash /app/sauron-eye.sh -f sitelist -o terminal
+```
+If you want to get the html report with de Dockerized image, you can run the same:
+```bash
+docker run -v /PATH_TO_YOUR/SITELIST_FILE/:/app/ sauron-eye:1.0 bash /app/sauron-eye.sh -f sitelist -o html
+```
